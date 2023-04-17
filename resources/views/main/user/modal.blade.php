@@ -1,33 +1,32 @@
-<!-- modal tambah produk  -->
-<div class="modal fade" tabindex="-1" role="dialog" id="modalTambahProduk">
+<!-- modal tambah user  -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modalTambahUser">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Tambah Produk</h5>
+                <h5 class="modal-title">Tambah User</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="company">Nama Produk</label>
-                    <input type="text" class="form-control" id="txtNamaProduk">
+                    <label for="company">User Name</label>
+                    <input type="text" class="form-control" id="txtNamaUser">
                 </div>
                 <div class="form-group">
-                    <label for="company">Harga</label>
-                    <input type="text" class="form-control" id="txtHarga">
+                    <label for="company">Password</label>
+                    <input type="password" class="form-control" id="txtPassword">
                 </div>
                 <div class="form-group">
-                    <label for="company">Kategori</label>
-                    <select class="form-control" id="txtKategori">
+                    <label for="company">Role</label>
+                    <select class="form-control" id="txtRole">
                         <option value="none">--- Pilih Kategori ---</option>
-                        @foreach($dataKategori as $kategori)
-                        <option value="{{ $kategori -> nama_kategori }}">{{ $kategori -> nama_kategori }}</option>
-                        @endforeach
+                        <option value="ADMIN">Admin</option>
+                        <option value="ADMIN">User</option>
                     </select>
                 </div>
                 <div>
-                    <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahProduk()">Proses Tambah Produk</a>
+                    <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahUser()">Proses Tambah User</a>
                 </div>
             </div>
             <div class="modal-footer bg-whitesmoke br">
@@ -38,35 +37,33 @@
 </div>
 
 <!-- modal edit produk  -->
-<div class="modal fade" tabindex="-1" role="dialog" id="modalEditProduk">
+<div class="modal fade" tabindex="-1" role="dialog" id="modalEditUser">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Edit Produk</h5>
+                <h5 class="modal-title">Edit User</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="company">Nama Produk</label>
-                    <input type="text" class="form-control" id="txtNamaProdukEdit" readonly>
+                    <label for="company">Nama User</label>
+                    <input type="text" class="form-control" id="txtNamaUserEdit" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="company">Harga</label>
-                    <input type="text" class="form-control" id="txtHargaEdit">
+                    <label for="company">Password</label>
+                    <input type="text" class="form-control" id="txtPasswordEdit">
                 </div>
                 <div class="form-group">
-                    <label for="company">Kategori</label>
-                    <select class="form-control" id="txtKategoriEdit">
-                        <option value="none">--- Pilih Kategori ---</option>
-                        @foreach($dataKategori as $kategori)
-                        <option value="{{ $kategori -> nama_kategori }}">{{ $kategori -> nama_kategori }}</option>
-                        @endforeach
+                    <label for="company">Role</label>
+                    <select class="form-control" id="txtRoleEdit">
+                        <option value="ADMIN">Admin</option>
+                        <option value="ADMIN">User</option>
                     </select>
                 </div>
                 <div>
-                    <a href="javascript:void(0)" @click="prosesUpdateProdukAtc()" class="btn btn-primary">Update Data Produk</a>
+                    <a href="javascript:void(0)" @click="prosesUpdateUserAtc()" class="btn btn-primary">Update Data User</a>
                 </div>
             </div>
             <div class="modal-footer bg-whitesmoke br">
@@ -77,7 +74,7 @@
 </div>
 
 <!-- modal import produk  -->
-<div class="modal fade" tabindex="-1" role="dialog" id="modalImportProduk">
+<!-- <div class="modal fade" tabindex="-1" role="dialog" id="modalImportProduk">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -104,5 +101,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>

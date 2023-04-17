@@ -38,4 +38,8 @@ Route::get('/auth/logout', [C_Auth::class, 'logout']);
 	Route::get('/app/info-aplikasi', [C_Dashboard::class, 'infoAplikasi']);
 
 	Route::get('/app/user/data', [C_User::class, 'dataUser']);
+	Route::post('/app/user/tambah/proses', [C_User::class, 'prosesTambahUser']);
+	Route::post('/app/user/data/res', [C_User::class, 'getDataUserRes']);
+	Route::post('/app/user/update/proses', [C_User::class, 'prosesUpdateUser']);
+	Route::post('/app/user/hapus/proses', [C_User::class, 'prosesHapusUser']);
 // });

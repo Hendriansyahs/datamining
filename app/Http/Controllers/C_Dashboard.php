@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Models\M_Produk;
 use App\Models\M_Penjualan;
+// use Auth;
 
 class C_Dashboard extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function dashboard()
     {
         return view('main.dashboard');

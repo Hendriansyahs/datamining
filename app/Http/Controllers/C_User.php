@@ -91,4 +91,17 @@ class C_User extends Controller
         //
     }
 
+    public function prosesTambahUser(Request $request)
+    {
+        // {'nama':nama, 'harga':harga, 'kategori':kategori}
+        $user = new M_User();
+        $user -> username = $request -> username;
+        $user -> role = $request -> role;
+        $user -> password = $request -> password_hash($password, PASSWORD_DEFAULT);
+        $user -> active = "1";
+        $user -> save();
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+
 }
