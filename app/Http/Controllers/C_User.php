@@ -97,7 +97,7 @@ class C_User extends Controller
         $user = new M_User();
         $user -> username = $request -> username;
         $user -> role = $request -> role;
-        $user -> password = $request -> password_hash($password, PASSWORD_DEFAULT);
+        $user -> password = password_hash($request -> password, PASSWORD_DEFAULT);
         $user -> active = "1";
         $user -> save();
         $dr = ['status' => 'sukses'];

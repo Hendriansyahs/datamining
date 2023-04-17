@@ -26,7 +26,7 @@
                     </select>
                 </div>
                 <div>
-                    <a href="javascript:void(0)" class="btn btn-primary" @click="prosesTambahUser()">Proses Tambah User</a>
+                    <a href="javascript:void(0)" class="btn btn-primary" onclick="prosesTambahUser()">Proses Tambah User</a>
                 </div>
             </div>
             <div class="modal-footer bg-whitesmoke br">

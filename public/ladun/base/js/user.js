@@ -103,7 +103,7 @@ function prosesTambahUser()
     let role = document.querySelector("#txtRole").value;
     let ds = {'username':nama, 'password':password, 'role':role}
     axios.post(rProsesTambahUser, ds).then(function(res){
-        $("#modalTambahProduk").modal("hide");
+        $("#modalTambahUser").modal("hide");
         setTimeout(function(){
             pesanUmumApp('success', 'Sukses', 'Data User berhasil ditambahkan');
             renderPage('app/user/data', 'Data User');

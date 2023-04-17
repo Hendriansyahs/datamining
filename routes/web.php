@@ -14,7 +14,7 @@ Route::get('/', [C_Auth::class, 'loginPage']);
 Route::post('/auth/login/proses', [C_Auth::class, 'loginProses']);
 Route::get('/auth/logout', [C_Auth::class, 'logout']);
 
-// Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 
 	Route::get('/dashboard',[C_Dashboard::class, 'dashboard']);
 	Route::get('/dashboard/beranda', [C_Dashboard::class, 'berandaPage']);
@@ -42,4 +42,4 @@ Route::get('/auth/logout', [C_Auth::class, 'logout']);
 	Route::post('/app/user/data/res', [C_User::class, 'getDataUserRes']);
 	Route::post('/app/user/update/proses', [C_User::class, 'prosesUpdateUser']);
 	Route::post('/app/user/hapus/proses', [C_User::class, 'prosesHapusUser']);
-// });
+});
