@@ -16,7 +16,7 @@ class Authenticate extends Middleware
     {
         if (! $request->expectsJson()) {
             // return route('login');
-            return route('/');
+            return '/';
         }
     //      if(\Auth::user()->hasRole('copy')){
     //     $this->redirectTo = '/copy/dashboardCopy';
