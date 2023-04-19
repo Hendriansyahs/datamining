@@ -104,4 +104,28 @@ class C_User extends Controller
         return \Response::json($dr);
     }
 
+     public function getDataUserRes(Request $request)
+    {
+        $dataUser = M_User::where('id', $request -> id) -> first();
+        // $dr = ['status' => 'sukses'];
+        return \Response::json($dataUser);
+    }
+     public function prosesUpdateUser(Request $request)
+    {
+        // {'kdProduk':kdProduk, 'nama':nama, 'harga':harga, 'kategori':kategori}
+        M_User::where('id', $request -> id) -> update([
+            'username' => $request -> username,
+            'role' => $request -> role,
+            'password' => $request -> kategori
+        ]);
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+    public function prosesHapusUser(Request $request)
+    {
+        M_User::where('id', $request -> id) -> delete();
+        $dr = ['status' => 'sukses'];
+        return \Response::json($dr);
+    }
+
 }

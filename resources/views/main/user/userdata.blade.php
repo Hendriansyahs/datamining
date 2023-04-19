@@ -36,8 +36,11 @@
                             @elseif ($user->active != 1) Diblokir
                             @endif</td>
                         <td>
-                            <a href="javascript:void(0)" onclick="keDetail('{{ $user -> kd_pengujian }}')" class="btn btn-warning btn-sm">Edit</a>&nbsp;
-                            <a href="{{ url('/apriori/analisa/cetak/') }}/{{ $user -> kd_pengujian }}" target="new" class="btn btn-danger btn-sm">Hapus</a>
+                            <!-- <a class="btn btn-warning btn-sm" href="javascript:void(0)" @click="editAtc('{{ $user -> id }}')">Edit</a>
+ -->
+                            <a class="btn btn-danger btn-sm" href="javascript:void(0)" @click="deleteAtc('{{ $user -> id }}')">
+                                Hapus
+                            </a>
                         </td>
                     </tr>
                     @endforeach
